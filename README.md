@@ -20,7 +20,7 @@ O projeto explora diferentes estratégias de organização dos dados (tamanho fi
 ## Como executar
 
 ### 1. Clonar o repositório
-```bash
+
 git clone https://github.com/unitynathan/TP01-AEDS2.git
 cd TP01-AEDS2
 
