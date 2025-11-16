@@ -20,27 +20,35 @@ O projeto explora diferentes estratégias de organização dos dados (tamanho fi
 ## Como executar
 
 ### 1. Clonar o repositório
-
+```bash
 git clone https://github.com/unitynathan/TP01-AEDS2.git
 cd TP01-AEDS2
+```
 
 ### 2. Executar o programa principal
+```bash
 python main.py
+```
 
 ### 3. Gerar registros de teste
+```bash
 python gerar.py
+```
 
 ### 4. Funcionalidades
-Simulação de armazenamento em arquivos binários
+- Simulação de armazenamento em arquivos binários
 
-Organização de registros em blocos de tamanho fixo e tamanho variável
+- Organização de registros em blocos de tamanho fixo e tamanho variável
 
-Estatísticas de ocupação e eficiência do espaço
+- Estatísticas de ocupação e eficiência do espaço
 
 ### 5. Exemplo de uso
+```bash
 python main.py
 
 Saída esperada (exemplo simplificado):
 Bloco 1: 80% ocupado
 Bloco 2: 65% ocupado
 Eficiência total: 72%
+
+```
