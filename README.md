@@ -12,7 +12,7 @@ O projeto explora diferentes estratégias de organização dos dados (tamanho fi
 - `bloco.py` → Implementação da estrutura de **blocos de armazenamento**  
 - `gerar.py` → Script para gerar registros de teste  
 - `main.py` → Ponto de entrada principal do programa  
-- `registros.py` → Manipulação de registros (inserção, remoção, busca)  
+- `registros.py` → Manipulação de registros 
 - `utils.py` → Funções auxiliares para manipulação de dados  
 
 ---
@@ -25,14 +25,16 @@ git clone https://github.com/unitynathan/TP01-AEDS2.git
 cd TP01-AEDS2
 ```
 
-### 2. Executar o programa principal
+### 2. Instalar bilioteca Faker
 ```bash
-python main.py
+pip install faker
 ```
 
-### 3. Gerar registros de teste
+### 3. Executar o programa principal
+Ao executar, o .DAT é gerado no decorrer da execução do programa.
 ```bash
-python gerar.py
+python main.py
+
 ```
 
 ### 4. Funcionalidades
