@@ -15,13 +15,12 @@ def main():
     if modo == 2:
         espalhamento = input("Permitir espalhamento? (s/n): ").lower() == 's'
 
-    # 2. GERAÇÃO (Aqui é onde o nome deve bater!)
+    # 2. GERAÇÃO 
     print(f"\nGerando {num_alunos} registros...")
     
-    # IMPORTANTE: Definimos 'lista_inicial' aqui
     lista_inicial = gerar.gerar_lista_alunos(num_alunos) 
     
-    # 3. ORGANIZAÇÃO (Agora o Python vai encontrar a 'lista_inicial')
+    # 3. ORGANIZAÇÃO 
     blocos = registros.organizar_em_blocos(lista_inicial, tamanho_bloco, modo, espalhamento)
     
     # Cria o gerenciador com as regras escolhidas
@@ -42,7 +41,6 @@ def main():
         
         if op == '1':
             print("\n--- Inserindo Novo Aluno ---")
-            # Para facilitar, vamos gerar um aleatório, mas mostrar os dados
             novo = gerar.gerar_lista_alunos(1)[0]
             print(f"Gerado: {novo.nome} (Matrícula: {novo.matricula})")
             
@@ -65,7 +63,6 @@ def main():
             except ValueError:
                 print("\n[ERRO] Por favor, digite um número de matrícula válido.")
             
-            # ESTA LINHA É A MAIS IMPORTANTE: ela faz o programa parar para você ler
             input("\nPressione Enter para voltar ao menu...")
 
         elif op == '3':
@@ -90,7 +87,7 @@ def main():
         elif op == '4':
             print("\nIniciando Reorganização Física...")
             
-            # 1. Tira uma "foto" de como o arquivo está agora (cheio de buracos)
+            # 1. Tira uma "foto" de como o arquivo está agora
             antes = utils.calcular_metricas(gerente.blocos)
             
             # 2. Executa a limpeza (gera a nova lista de blocos)
@@ -99,10 +96,10 @@ def main():
             # 3. Tira uma "foto" de como ficou depois (compactado)
             depois = utils.calcular_metricas(gerente.blocos)
             
-            # 4. CHAMA A EXIBIÇÃO do relatório que estava faltando
+            # 4. CHAMA A EXIBIÇÃO do relatório 
             utils.exibir_comparativo(antes, depois)
             
-            # 5. SALVA o novo arquivo compactado (como pede o manual)
+            # 5. SALVA o novo arquivo compactado
             registros.escrever_arquivo_dat(gerente.blocos, "alunos_reorg.dat")
             print("\n[AVISO] Novo arquivo 'alunos_reorg.dat' gerado com sucesso.")
             
